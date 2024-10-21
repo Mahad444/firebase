@@ -41,7 +41,10 @@ getDocs(colRef)
     console.log(err.message)
 })
 
-//get collection data 
+// get collection data with where clause
+
+const que = query(colRef,where('author','==','mahad'))
+
 
 
 // query
