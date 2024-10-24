@@ -44,7 +44,15 @@ getDocs(colRef)
 // get collection data with where clause
 
 const que = query(colRef,where('author','==','mahad'))
-
+// calling the query
+getDocs(que)
+.then((snapshot)=>{
+    let books = []
+    snapshot.docs.forEach((doc) => {
+        books.push({...doc.data(), id:doc.id})
+    })
+    console.log(books) 
+})
 
 
 // query
