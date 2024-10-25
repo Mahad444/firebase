@@ -54,6 +54,15 @@ getDocs(que)
     console.log(books) 
 })
 
+// next we will use onSnapshot to listen to changes in the database
+
+onSnapshot(colRef, (snapshot)=>{
+    let books = []
+    snapshot.docs.forEach((doc) => {
+        books.push({...doc.data(), id:doc.id})
+    })
+    console.log(books) 
+}
 
 // query
 const q = query(colRef,orderBy('createdAt'))
