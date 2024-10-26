@@ -63,6 +63,11 @@ onSnapshot(colRef, (snapshot)=>{
     })
     console.log(books) 
 }
+)
+
+// ordering data
+
+
 
 // query
 const q = query(colRef,orderBy('createdAt'))
