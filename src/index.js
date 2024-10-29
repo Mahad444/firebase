@@ -73,6 +73,17 @@ onSnapshot(colRef, (snapshot)=>{
     })
     console.log(books) 
 }
+)
+
+// ordering data
+onSnapshot(colRef, (snapshot)=>{
+    let books = []
+    snapshot.docs.forEach((doc) => {
+        books.push({...doc.data(), id:doc.id})
+    })
+    console.log(books) 
+}
+)
 
 
 
