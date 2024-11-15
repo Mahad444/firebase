@@ -6,3 +6,5 @@ export const multiply = (a, b) => a * b;
 // index.js
 import { add, subtract, multiply } from './functions';
 console.log(add(1, 2)); // 3
+console.log(subtract(3, 2)); // 1
+console.log(multiply(2, 3)); // 6
