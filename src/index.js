@@ -134,3 +134,18 @@ deleteBookForm.addEventListener('submit' , (e)=>{
     .then((doc)=>{
         console.log(doc.data(), doc.id)
     })
+
+// updating a document
+const updateForm = document.querySelector('.update')
+updateForm.addEventListener('submit' , (e)=>{
+    e.preventDefault()
+
+    const docRef = doc(db, 'books',  updateForm.id.value)
+
+    updateDoc(docRef, {
+        title: updateForm.title.value
+        })  ,
+    .then(()=>{
+        updateForm.reset()
+    })
+})
