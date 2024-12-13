@@ -145,11 +145,11 @@ updateForm.addEventListener('submit' , (e)=>{
     updateDoc(docRef, {
         title: updateForm.title.value
         })  ,
-    .then(()=>{
-        updateForm.reset()
+        updateDoc(docRef, {
     })
 })
 
 // connection to backend
 import { getDocs, updateDoc } from "firebase/firestore"
+ 
 
