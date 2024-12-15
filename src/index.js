@@ -150,6 +150,7 @@ updateForm.addEventListener('submit' , (e)=>{
 })
 
 // connection to backend
-import { getDocs, updateDoc } from "firebase/firestore"
+import { getDocs, updateDoc } from "firebase/firestore";
+
  
 
