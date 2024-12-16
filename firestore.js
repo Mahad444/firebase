@@ -1,5 +1,7 @@
 // firestore is a NoSQL database that stores data in the form of collections and documents.
 
+import { on } from "nodemon"
+
 {
     // get collection data with where clause
 
@@ -42,6 +44,13 @@
             books.push({ ...doc.data(), id: doc.id })
         })
         console.log(books)
-    }
-    )
+    })
+    // delete data from firestore temporarily
+    onSnapshot(colRef, (snapshot) => {
+        let books = []
+        snapshot.docs.forEach((doc) => {
+            books.push({ ...doc.data(), id: doc.id })
+        })
+        console.log(books)
+    })
 }
