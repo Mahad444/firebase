@@ -1,6 +1,6 @@
 // firestore is a NoSQL database that stores data in the form of collections and documents.
 
-import { on } from "nodemon"
+
 
 {
     // get collection data with where clause
