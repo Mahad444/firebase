@@ -53,4 +53,12 @@
         })
         console.log(books)
     })
+    // delete data from firestore temporarily
+    onSnapshot(colRef, (snapshot) => {
+        let books = []
+        snapshot.docs.forEach((doc) => {
+            books.push({ ...doc.data(), id: doc.id })
+        })
+        console.log(books)
+    })
 }
