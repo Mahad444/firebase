@@ -61,4 +61,12 @@
         })
         console.log(books)
     })
+    // updating data in firestore
+    onSnapshot(colRef, (snapshot) => {
+        let books = []
+        snapshot.docs.forEach((doc) => {
+            books.push({ ...doc.data(), id: doc.id })
+        })
+        console.log(books)
+    })
 }

@@ -9,8 +9,5 @@ console.log(subtract(3, 2)); // 1
 console.log(multiply(2, 3)); // 6
 console.log('Hello World')
 
-if (module.hot) {
-    module.hot.accept();
-}
-
-// 
+if (module.hot) 
+module.hot.accept();
