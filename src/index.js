@@ -153,7 +153,15 @@ updateForm.addEventListener('submit' , (e)=>{
 import { getDocs, updateDoc } from "firebase/firestore";
 import { db } from "./firestore";
 
-
+// get collection data
+getDocs(collection(db, 'books'))
+.then((snapshot)=>{
+    let books = []
+    snapshot.docs.forEach((doc) => {
+        books.push({...doc.data(), id:doc.id})
+    })
+    console.log(books) 
+})
 
  
 
