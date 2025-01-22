@@ -136,7 +136,6 @@ deleteBookForm.addEventListener('submit' , (e)=>{
     })
 
 // updating a document
-const updateForm = document.querySelector('.update')
 updateForm.addEventListener('submit' , (e)=>{
     e.preventDefault()
 
@@ -161,6 +160,20 @@ getDocs(collection(db, 'books'))
         books.push({...doc.data(), id:doc.id})
     })
     console.log(books) 
+})
+
+// updating a document
+const updateForm = document.querySelector('.update')
+updateForm.addEventListener('submit' , (e)=>{
+    e.preventDefault()
+
+    const docRef = doc(db, 'books',  updateForm.id.value)
+
+    updateDoc(docRef, {
+        title: updateForm.title.value
+        })  ,
+        updateDoc(docRef, {
+    })
 })
 
  
