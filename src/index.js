@@ -176,5 +176,18 @@ updateForm.addEventListener('submit' , (e)=>{
     })
 })
 
+// deleting documents
+const deleteForm = document.querySelector('.delete')
+deleteForm.addEventListener('submit' , (e)=>{
+    e.preventDefault()
+
+    const docRef = doc(db, 'books',  deleteForm.id.value)
+
+    deleteDoc(docRef)
+    .then(()=>{
+        deleteForm.reset()
+    })
+})
+
  
 
