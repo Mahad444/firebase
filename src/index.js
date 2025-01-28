@@ -189,5 +189,25 @@ deleteForm.addEventListener('submit' , (e)=>{
     })
 })
 
+// the delete is just a trash icon that will delete the document temporarily
+
+// temporarily delete a document (soft delete)
+const trashIcon = document.querySelector('.trash-icon')
+trashIcon.addEventListener('click', (e) => {
+    const docId = e.target.getAttribute('data-id')
+    const docRef = doc(db, 'books', docId)
+
+    updateDoc(docRef, {
+        deleted: true
+    })
+    .then(() => {
+        console.log(`Document with ID ${docId} marked as deleted`)
+    })
+    .catch(err => {
+        console.log(err.message)
+    })
+})
+
+
  
 
