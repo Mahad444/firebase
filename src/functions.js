@@ -11,3 +11,14 @@ console.log('Hello World')
 
 if (module.hot) 
 module.hot.accept();
+
+// the trash recycle bin from deleted records
+const trashIcon = document.querySelector('.trash-icon')
+trashIcon.addEventListener('click', (e) => {
+    const docId = e.target.getAttribute('data-id')
+    const docRef = doc(db, 'books', docId)
+
+    updateDoc(docRef, {
+        deleted: true
+    })
+})
