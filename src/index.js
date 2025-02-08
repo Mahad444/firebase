@@ -196,6 +196,7 @@ const trashIcon = document.querySelector('.trash-icon')
 trashIcon.addEventListener('click', (e) => {
     const docId = e.target.getAttribute('data-id')
     const docRef = doc(db, 'books', docId)
+    console.log(docRef)
 
     updateDoc(docRef, {
         deleted: true
