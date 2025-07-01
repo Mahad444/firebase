@@ -7,7 +7,7 @@ export const multiply = (a, b) => a * b;
 import { add, subtract, multiply } from './functions';
 console.log(subtract(3, 2)); // 1
 console.log(multiply(2, 3)); // 6
-console.log('Hello World, This testing an APP')
+console.log('Hello World, This testing an APP with Webpack and Firebase');
 
 if (module.hot) 
 module.hot.accept();
