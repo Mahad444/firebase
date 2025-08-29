@@ -22,3 +22,7 @@ trashIcon.addEventListener('click', (e) => {
         deleted: true
     })
 })
+        
+        .catch(err => {
+            console.log(err.message)
+        })

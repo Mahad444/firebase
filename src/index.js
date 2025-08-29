@@ -189,7 +189,6 @@ deleteForm.addEventListener('submit' , (e)=>{
     })
 })
 
-// the delete is just a trash icon that will delete the document temporarily
 
 // temporarily delete a document (soft delete)
 const trashIcon = document.querySelector('.trash-icon')
